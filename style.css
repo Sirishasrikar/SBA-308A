@@ -16,3 +16,27 @@
     height: auto;
     border-radius: 10px;
 }
+
+.like-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.top-liked-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.top-liked-img-container {
+    text-align: center;
+}
+
+.top-liked-img-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
