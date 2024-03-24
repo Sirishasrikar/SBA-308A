@@ -25,7 +25,7 @@ async function fetchCatImages(page) {
     }
 }
 
-
+//as the Cat API can't be modified, I tried to simulate how to use the POST request
 async function sendFakePostRequest(imageId) {
     try {
         // Simulate a fake POST request to a fake endpoint
