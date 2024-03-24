@@ -1,5 +1,10 @@
 // updateUI.js
 
+export function updateLikesCount(likedImages) {
+    const totalLikes = Object.values(likedImages).reduce((acc, cur) => acc + cur, 0);
+    document.getElementById('likes-count').textContent = `Total Likes: ${totalLikes}`;
+}
+
 export function updateTopLikedImages(likedImages) {
     // Sort the likedImages object by the number of likes in descending order
     const sortedLikedImages = Object.entries(likedImages).sort((a, b) => b[1] - a[1]);

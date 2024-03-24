@@ -2,7 +2,7 @@
 
 import { fetchCatImages } from './fetchCatImages.js';
 import { handleLike } from './handleLikes.js';
-import { updateLikesCount, updateMostLikedImage } from './updateUI.js';
+import { updateTopLikedImages } from './updateUI.js'; // Update import statement
 
 const gallery = document.getElementById('gallery');
 const loadMoreBtn = document.getElementById('load-more');
@@ -27,8 +27,7 @@ async function displayCatImages() {
             } else {
                 likedImages[likeData.imageId]++;
             }
-            updateLikesCount(likedImages);
-            updateMostLikedImage(likedImages);
+            updateTopLikedImages(likedImages); // Update function call
         });
 
         const imgContainer = document.createElement('div');
