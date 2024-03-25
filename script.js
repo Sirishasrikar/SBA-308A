@@ -10,6 +10,27 @@ const loadMoreBtn = document.getElementById('load-more');
 let page = 1;
 let likedImages = {};
 
+
+async function sendFakePostRequest(imageId) {
+    try {
+        const response = await fetch('https://example.com/like', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                imageId: imageId, // Include the ID of the liked image
+                userId: 1 // Assuming user ID
+            })
+        });
+        const data = await response.json();
+        console.log('Fake POST request response:', data);
+    } catch (error) {
+        console.error('Error sending fake POST request:', error);
+    }
+}
+
+
 async function displayCatImages() {
     const catImages = await fetchCatImages(page);
     catImages.forEach(cat => {

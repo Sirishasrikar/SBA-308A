@@ -7,3 +7,4 @@ export function handleLike(imageId) {
         userId: 1 // Assuming user ID
     };
 }
+
